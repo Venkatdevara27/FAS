@@ -1,0 +1,22 @@
+int flamePin = A0;
+int buzzer = 8;
+int led = 13;
+
+void setup() {
+  pinMode(buzzer, OUTPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int flameValue = analogRead(flamePin);
+  Serial.println(flameValue);
+  if (flameValue < 100) { // adjust threshold
+    digitalWrite(buzzer, HIGH);
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(buzzer, LOW);
+    digitalWrite(led, LOW);
+  }
+  delay(200);
+}
