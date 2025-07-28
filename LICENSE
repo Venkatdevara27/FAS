@@ -1,0 +1,33 @@
+
+---
+
+### 🐙 3. **Upload to GitHub**
+
+#### Option A: GitHub Web Upload (Easy)
+
+1. Go to [github.com](https://github.com) and sign in.
+2. Click `New` repository → Name: `fire-alarm-system`
+3. Create it.
+4. On the new repo page, click “Upload files” → drag your folder contents in.
+5. Click “Commit changes”.
+
+#### Option B: Using Git CLI (Professional Way)
+
+```bash
+# Navigate to your project folder
+cd fire-alarm-system
+
+# Initialize Git
+git init
+
+# Add files
+git add .
+
+# Commit
+git commit -m "Initial commit: Fire Alarm Detection System"
+
+# Create repo on GitHub and copy its HTTPS URL (e.g., https://github.com/yourname/fire-alarm-system.git)
+
+# Add remote and push
+git remote add origin https://github.com/yourname/fire-alarm-system.git
+git push -u origin master
